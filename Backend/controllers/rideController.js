@@ -77,7 +77,6 @@ module.exports.verifyOtp = async function (req, res, next) {
     const result = await rideService.verifyOtp(otp, userId, rideId)
     if (result) {
         const { socketId } = await userModel.findById(userId) //user socketId
-        console.log(socketId)
         sendMessageToSocketId(socketId, {
             event: 'otpVerified',
             data: "Otp Verified"
@@ -92,7 +91,6 @@ module.exports.verifyOtp = async function (req, res, next) {
 module.exports.acceptRide = async function (req, res, next) {
     const { userId, captainId, rideId } = req.body
     const result = await rideService.acceptRide(userId, captainId, rideId)
-    console.log("controller", result)
     const userSocketId = await userModel.findById(userId).select("socketId")
     const captain = await captainModel.findById(captainId)
     sendMessageToSocketId(userSocketId.socketId, {

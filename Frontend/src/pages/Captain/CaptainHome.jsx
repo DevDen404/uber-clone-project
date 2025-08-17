@@ -41,7 +41,6 @@ const CaptainHome = () => {
         )
       }
     }
-    console.log("updated location")
     updateLocation()
 
     // const locationInterval = setInterval(updateLocation,10000)
@@ -50,7 +49,6 @@ const CaptainHome = () => {
 
   useEffect(() => {
     receiveMessage('newRide', (data) => {
-      console.log(data)
       setNewRideData(data);
       setNewRide(true)
       newRideIncoming()
@@ -80,12 +78,9 @@ const CaptainHome = () => {
     const userId = newRideData.userId
     const rideId = newRideData._id
     const result = await axios.post(`${import.meta.env.VITE_BASE_URL}/ride/verifyOtp`, { otp, userId, rideId })
-    console.log(result)
 
     if (result.data) {
       setRidingPanelOpen(true)
-    } else {
-      console.log("false")
     }
 
 

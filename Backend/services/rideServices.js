@@ -115,12 +115,9 @@ module.exports.acceptRide = async function (userId, captainId, rideId) {
 
 module.exports.captainStatusChange = async function (captainId, status) {
     try {
-        console.log(captainId, status)
         const result = await captainModel.findByIdAndUpdate(captainId, { status: status })
-        console.log("status update service")
         return result
     } catch (error) {
-        console.log(error)
         throw new Error(error)
     }
 }

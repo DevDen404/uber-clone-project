@@ -86,7 +86,6 @@ module.exports.getAux = async function (req, res, next) {
 
     try {
         const { captainId } = req.body
-        console.log("getAUx",req.body)
         const result = await captainModel.findById(captainId)
         const status = result.status
         res.status(200).json({status})

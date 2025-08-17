@@ -8,7 +8,7 @@ const UserContext = ({ children }) => {
     const [user, setUser] = useState({})
 
     //  useEffect(() => {
-    //   console.log(user)
+    //   (user)
 
     // }, [user])
     

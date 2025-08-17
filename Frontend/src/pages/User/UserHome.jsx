@@ -335,7 +335,7 @@ const Home = () => {
   })
 
   useEffect(() => {
-    receiveMessage('rideData', (data) => { setRideData(data);console.log(data) })
+    receiveMessage('rideData', (data) => { setRideData(data)})
     receiveMessage('rideAccepted', (data) => {
       console.log(data)
       setCaptainData(data)

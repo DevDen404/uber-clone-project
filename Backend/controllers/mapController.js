@@ -12,11 +12,10 @@ module.exports.getCoordinates = async function (origin) {
 
     try {
         const coordinates = await mapService.getCoordinates(origin)
-        console.log("controller", coordinates)
+        ("controller", coordinates)
         // res.status(200).json(coordinates)
         return coordinates
     } catch (error) {
-        console.log("controller error")
         // res.status(404).json({ message: 'Coordinates not found' })
     }
 }
