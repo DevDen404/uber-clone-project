@@ -1,6 +1,6 @@
 # Uber Clone
 
-A full-stack Uber-like ride-hailing application built for educational and portfolio purposes. This project demonstrates real-time ride booking, driver and user authentication, live tracking, and more, using modern web technologies.
+A full-stack Uber-like ride-handling application built for educational and portfolio purposes. This project demonstrates real-time ride booking, driver and user authentication, live tracking, and more, using modern web technologies.
 
 ## Project Structure
 
