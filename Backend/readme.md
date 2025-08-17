@@ -1,3 +1,21 @@
+
+# Uber Clone Backend API Documentation
+
+This backend powers the Uber Clone project, providing RESTful and real-time APIs for user and captain authentication, ride management, and geolocation services. It is built with Node.js, Express, MongoDB, JWT, and integrates Google Maps API for location and distance calculations.
+
+## Tech Stack
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT Authentication
+- Socket.io (for real-time features)
+- Google Maps API (for geolocation, address suggestions, distance/time)
+
+## Frontend
+The frontend is built with React.js and Vite, and communicates with this backend via HTTP and WebSocket APIs. See the main project README for more details.
+
+---
+
 # User Registration Endpoint Documentation
 
 ## Endpoint
